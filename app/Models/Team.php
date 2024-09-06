@@ -13,4 +13,10 @@ class Team extends Model
 
     // indicar quais colunas serão cadastradas na tabela
     protected $fillable = ['name'];
+
+    // criando relacionamento entre um para muitos
+    public function  employee()
+    {
+       return $this->hasMany(Employee::class);
+    }
 }

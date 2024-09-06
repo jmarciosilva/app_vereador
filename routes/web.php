@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +16,7 @@ Route::post('/store-team', [TeamController::class, 'store'])->name('teams.store'
 Route::get('/edit-team/{team}', [TeamController::class, 'edit'])->name('teams.edit');
 Route::put('/update-team/{team}', [TeamController::class, 'update'])->name('teams.update');
 Route::delete('/destroy-team/{team}', [TeamController::class, 'destroy'])->name('teams.destroy');
+
+// employees
+Route::get('/index-employee/{team}', [EmployeeController::class, 'index'])->name('employee.index');
 

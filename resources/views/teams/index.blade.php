@@ -17,6 +17,7 @@
             {{ \Carbon\Carbon::parse($team->created_at)->format('d/m/Y H:i:s') }} <br>
             {{ \Carbon\Carbon::parse($team->updated_at)->format('d/m/Y H:i:s') }} <br>
 
+            <a href="{{ route('employee.index', ['team' => $team->id]) }}">Listar Colaboradores da Equipe</a> &nbsp&nbsp
             <a href="{{ route('teams.show', ['team' => $team->id]) }}">Visualizar</a> &nbsp&nbsp
             <a href="{{ route('teams.edit', ['team' => $team->id]) }}">Editar</a> &nbsp&nbsp
             <form action="{{ route('teams.destroy', ['team' => $team->id]) }}" method="POST">
