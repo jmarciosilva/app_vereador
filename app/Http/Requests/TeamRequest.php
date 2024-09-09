@@ -32,6 +32,5 @@ class TeamRequest extends FormRequest
             'name.required' => 'Campo nome da Equipe é obrigatório',
             'name.unique' => 'Este nome de Equipe já foi cadastrado!'
         ];
-        
     }
 }
